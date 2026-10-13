@@ -31,3 +31,11 @@ bin/
 /OnlineBankingSystem/nbproject/private/
 /OnlineBankingSystem/build/
 /OnlineBankingSystem/dist/
+
+# ---- Project-specific ----
+# IntelliJ IDEA project files (NetBeans Ant config is kept)
+.idea/
+*.iml
+
+# Runtime data written by the app
+/data/*.log
