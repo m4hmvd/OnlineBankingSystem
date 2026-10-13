@@ -111,7 +111,13 @@ public class RegisterFrame extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 51));
         jLabel10.setText("© 2026 NovaBank. All rights reserved.");
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
+        // A missing image must not take the window down with an NPE.
+
+
+        java.net.URL iconUrl = getClass().getResource("/Logo.png");
+
+
+        jLabel11.setIcon(iconUrl == null ? null : new javax.swing.ImageIcon(iconUrl)); // NOI18N
 
         javax.swing.GroupLayout LeftLayout = new javax.swing.GroupLayout(Left);
         Left.setLayout(LeftLayout);

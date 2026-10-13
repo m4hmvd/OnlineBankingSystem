@@ -1,6 +1,6 @@
 # NovaBank — Online Banking System
 
-![Java](https://img.shields.io/badge/Java-17%2B-007396?logo=openjdk&logoColor=white)
+![Java](https://img.shields.io/badge/Java-25-007396?logo=openjdk&logoColor=white)
 ![Swing](https://img.shields.io/badge/GUI-Swing-blue)
 ![Build](https://img.shields.io/badge/Build-Ant-A81C7D?logo=apacheant&logoColor=white)
 ![Course](https://img.shields.io/badge/Course-25CSCI04C-brightgreen)
@@ -143,9 +143,17 @@ Or compile manually:
 ```bash
 mkdir -p out
 find src -name "*.java" > sources.txt
-javac -d out @sources.txt
+javac -encoding UTF-8 -d out @sources.txt
+
+# The GUI loads its logo from the classpath, so the images have to be copied
+# alongside the classes as well - javac only compiles .java files.
+cp src/*.png out/
+
 java -cp out banking.Main
 ```
+
+Run all of the above from the repository root: the app resolves its CSV storage
+relative to the working directory (`data/bank_*.csv`).
 
 ## 🔐 Demo Accounts
 

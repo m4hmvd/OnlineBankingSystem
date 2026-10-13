@@ -86,16 +86,8 @@ public class AuthService {
   }
 
   private static String resolveDataBasePath() {
-      String rootPath = "data/bank";
-      String nestedPath = "OnlineBankingSystem/data/bank";
-
-      if (new File(rootPath + "_users.csv").exists()) {
-          return rootPath;
-      }
-      if (new File(nestedPath + "_users.csv").exists()) {
-          return nestedPath;
-      }
-      return rootPath;
+      // Data lives in data/ at the project root; run from there.
+      return "data/bank";
   }
   
 }

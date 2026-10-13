@@ -4,18 +4,6 @@ out/
 !**/src/test/**/out/
 .kotlin
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -26,16 +14,17 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+### Build output ###
+/build/
+
+### macOS / Windows ###
 .DS_Store
-/OnlineBankingSystem/nbproject/private/
-/OnlineBankingSystem/build/
-/OnlineBankingSystem/dist/
+Thumbs.db
 
 # ---- Project-specific ----
-# IntelliJ IDEA project files (NetBeans Ant config is kept)
+# IntelliJ IDEA project files (the NetBeans Ant config is the one that builds)
 .idea/
 *.iml
 
-# Runtime data written by the app
+# Runtime output written by the app
 /data/*.log

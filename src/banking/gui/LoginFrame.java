@@ -139,7 +139,13 @@ public class LoginFrame extends javax.swing.JFrame {
 
         Left.setBackground(new java.awt.Color(11, 60, 93));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo.png"))); // NOI18N
+        // A missing image must not take the window down with an NPE.
+
+
+        java.net.URL iconUrl = getClass().getResource("/Logo.png");
+
+
+        jLabel6.setIcon(iconUrl == null ? null : new javax.swing.ImageIcon(iconUrl)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 55)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
